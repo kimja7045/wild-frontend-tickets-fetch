@@ -1,20 +1,20 @@
-import { useRef } from 'react';
+import { useId } from 'react';
 
 export default function TextField({ label, name, placeholder }: {
   label: string;
   name: string;
   placeholder: string;
 }) {
-  const idRef = useRef(`input-${Math.random().toString(16).slice(2)}`);
+  const id = useId();
 
   return (
     <div>
-      <label htmlFor={idRef.current}>{label}</label>
+      <label htmlFor={id}>{label}</label>
       <input
         type="text"
         name={name}
         placeholder={placeholder}
-        id={idRef.current}
+        id={id}
       />
     </div>
   );
