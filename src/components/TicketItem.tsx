@@ -17,7 +17,7 @@ function TicketItem({ ticket }: {
   };
 
   return (
-    <li>
+    <li className="ticket-item">
       <div className="title">{ticket.title}</div>
       <div className="description">{ticket.description}</div>
       <button

@@ -16,31 +16,7 @@ body {
   font-size: 1.6rem;
 }
 
-.ticket-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-
-  li {
-    margin-block: 1rem;
-    padding: 1rem;
-    border: 1px solid #CCC;
-
-    .title {
-      font-size: 2rem;
-      font-weight: 700;
-    }
-
-    .description {
-      margin-block: .5rem;
-    }
-  }
-}
-
 form {
-  margin-block: 2rem;
-  max-width: 40rem;
-
   div {
     margin-block: 1rem;
   }
@@ -54,6 +30,8 @@ form {
   textarea {
     width: 100%;
     padding: .8rem 1rem;
+    border: 1px solid #CCC;
+    border-radius: .4rem;
   }
 
   textarea {
@@ -62,6 +40,74 @@ form {
 
   button {
     width: 100%;
-    padding: .8rem 1rem;
+    padding: 1rem;
+    border: 1px solid #CCC;
+    border-radius: .4rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+
+    &:hover {
+      border-color: #999;
+    }
   }
+}
+
+header,
+main {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ticket-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  .ticket-item {
+    margin-block: 1rem;
+    padding: 2rem;
+    border: 1px solid #CCC;
+
+    .title {
+      font-size: 2rem;
+      font-weight: 900;
+    }
+
+    .description {
+      margin-block: 1rem;
+      padding: 2rem;
+      border-radius: 1rem;
+      background: #F2F2F2;
+    }
+
+    .status {
+      padding: 1rem 2rem;
+      border: 1px solid #CCC;
+      border-radius: .4rem;
+      font-size: 1.6rem;
+      cursor: pointer;
+
+      &:hover {
+        border-color: #999;
+      }
+    }
+  }
+}
+
+.comment-list {
+  margin: 2rem 0;
+  padding: 0;
+  list-style: none;
+
+  .comment-item {
+    margin-block: 1rem;
+    padding: 1rem 2rem;
+    border: 1px solid #CCC;
+    border-radius: .4rem;
+  }
+}
+
+.add-ticket-form {
+  margin-block: 2rem;
 }
