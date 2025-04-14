@@ -3,17 +3,17 @@ import { memo, useEffect } from 'react';
 import CommentList from './CommentList';
 import CommentForm from './CommentForm';
 
-import useToggleTicketStatus from '../hooks/useToggleTicketStatus';
+import useUpdateTicketStatus from '../hooks/useUpdateTicketStatus';
 
 import { Ticket } from '../types';
 
 function TicketItem({ ticket }: {
   ticket: Ticket;
 }) {
-  const toggleTicketStatus = useToggleTicketStatus();
+  const updateTicketStatus = useUpdateTicketStatus();
 
   const handleClick = () => {
-    toggleTicketStatus({ ticket });
+    updateTicketStatus(/* TODO: Implement updateTicketStatus */);
   };
 
   return (
